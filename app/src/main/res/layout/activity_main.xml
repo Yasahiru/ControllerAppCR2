@@ -5,15 +5,284 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ControlActivity">
 
-    <TextView
+
+    <!-- Top SIDE (20%) -->
+    <!-- Vertical guideline at 80% -->
+    <LinearLayout
+        android:id="@+id/rightPanel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dashed_border"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineVertical80"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- mode btns-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mode" />
+            <!-- Mode Buttons (8 square buttons) -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="8"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <!-- Button 1 -->
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="40dp"
+                    android:layout_height="55dp"
+                    android:text="1"
+                    android:layout_margin="5dp"
+                    android:gravity="center" />
+
+                <!-- Button 2 -->
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_width="40dp"
+                    android:layout_height="55dp"
+                    android:text="2"
+                    android:layout_margin="5dp"
+                    android:gravity="center" />
+
+                <!-- Button 3 -->
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_width="40dp"
+                    android:layout_height="55dp"
+                    android:text="3"
+                    android:layout_margin="5dp"
+                    android:gravity="center" />
+
+                <!-- Button 4 -->
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="55dp"
+                    android:text="4"
+                    android:layout_margin="5dp"
+                    android:gravity="center" />
+
+                <!-- Button 5 -->
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="55dp"
+                    android:text="5"
+                    android:layout_margin="5dp"
+                    android:gravity="center" />
+
+                <!-- Button 6 -->
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="55dp"
+                    android:text="6"
+                    android:layout_margin="5dp"
+                    android:gravity="center" />
+
+                <!-- Button 7 -->
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="55dp"
+                    android:text="7"
+                    android:layout_margin="5dp"
+                    android:gravity="center" />
+
+                <!-- Button 8 -->
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="55dp"
+                    android:text="8"
+                    android:layout_margin="5dp"
+                    android:gravity="center" />
+            </GridLayout>
+
+
+        </LinearLayout>
+
+        <!-- btn-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnConnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connect" />
+        </LinearLayout>
+
+        <!--wall btns -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wall" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- Button 1 -->
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="55dp"
+                    android:text="1"
+                    android:layout_margin="5dp"
+                    android:gravity="center" />
+
+                <!-- Button 2 -->
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="55dp"
+                    android:text="2"
+                    android:layout_margin="5dp"
+                    android:gravity="center" />
+
+                <!-- Button 3 -->
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="55dp"
+                    android:text="3"
+                    android:layout_margin="5dp"
+                    android:gravity="center" />
+
+                <!-- Button 4 -->
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="55dp"
+                    android:text="4"
+                    android:layout_margin="5dp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical80"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <!-- LEFT SIDE (80%) -->
+    <LinearLayout
+        android:id="@+id/controlLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dashed_border"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/guidelineVertical80">
+
+        <!-- Top Arrow Layout (45% width) -->
+        <LinearLayout
+            android:id="@+id/topArrows"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.5"
+            android:background="@drawable/dashed_border"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/baseline_arrow_upward_24" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/baseline_arrow_downward_24" />
+            <!-- Add your top arrows (e.g., rotate left/right) here -->
+        </LinearLayout>
+
+        <!-- Middle Data Layout (10% width) -->
+        <LinearLayout
+            android:id="@+id/data"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.5"
+            android:background="@drawable/dashed_border"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/dataTextView"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dashed_border"
+                    android:gravity="center_horizontal"
+                    android:text="Ultrasonic Data" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/controlLayout"
+                    android:layout_marginTop="20dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- Bottom Arrow Layout (45% width) -->
+        <LinearLayout
+            android:id="@+id/bottomArrows"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.5"
+            android:background="@drawable/dashed_border"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/baseline_arrow_back_24" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/baseline_arrow_forward_24" />
+        </LinearLayout>
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
