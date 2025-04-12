@@ -29,7 +29,7 @@ import java.io.InputStreamReader
 class ControlActivity : AppCompatActivity() {
 
     private lateinit var address: String
-    private lateinit var btnConnect: Button  // Declare the button
+    private lateinit var btnConnect: ImageButton
     private lateinit var adapter: SensorDataAdapter
     private val dataList = mutableListOf<SensorData>()
 
@@ -59,7 +59,6 @@ class ControlActivity : AppCompatActivity() {
         val btnLeft: ImageButton = findViewById(R.id.btnLeft)
         val btnRight: ImageButton = findViewById(R.id.btnRight)
 
-
         btn1.setOnClickListener { BluetoothManager.send("1") }
         btn2.setOnClickListener { BluetoothManager.send("2") }
         btn3.setOnClickListener { BluetoothManager.send("3") }
@@ -87,6 +86,7 @@ class ControlActivity : AppCompatActivity() {
             send("G") // Ask Arduino to send data
             readData()
         }
+
 
     }
 
@@ -171,6 +171,7 @@ class ControlActivity : AppCompatActivity() {
                 Log.e("ControlActivity", "Bluetooth permission denied")
                 showToast("Bluetooth permission denied")
             }
+
         }
     }
 }

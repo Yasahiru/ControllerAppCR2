@@ -4,4 +4,16 @@
     <string name="on">On</string>
     <string name="off">Off</string>
     <string name="disconnect">Disconnect</string>
+    <string name="n1">FL</string>
+    <string name="n2">FL</string>
+    <string name="n3">FR</string>
+    <string name="n4">FR</string>
+    <string name="n5">BL</string>
+    <string name="n6">BL</string>
+    <string name="n7">BF</string>
+    <string name="n8">BF</string>
+    <string name="w1">w1</string>
+    <string name="w2">w2</string>
+    <string name="w3">w3</string>
+    <string name="w4">w4</string>
 </resources>

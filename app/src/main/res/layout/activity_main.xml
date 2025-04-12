@@ -14,7 +14,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:gravity="center_vertical"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/guidelineVertical80"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -41,8 +41,17 @@
                     android:id="@+id/btn1"
                     android:layout_width="40dp"
                     android:layout_height="55dp"
-                    android:text="1"
-                    android:layout_margin="5dp"
+                    android:text="@string/n1"
+                    android:textSize="12sp"
+                    android:layout_margin="7dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeMaxTextSize="16sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:padding="0dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@android:color/holo_blue_dark"
                     android:gravity="center" />
 
                 <!-- Button 2 -->
@@ -50,8 +59,17 @@
                     android:id="@+id/btn2"
                     android:layout_width="40dp"
                     android:layout_height="55dp"
-                    android:text="2"
-                    android:layout_margin="5dp"
+                    android:text="@string/n2"
+                    android:textSize="12sp"
+                    android:layout_margin="7dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeMaxTextSize="16sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:padding="0dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@android:color/holo_blue_dark"
                     android:gravity="center" />
 
                 <!-- Button 3 -->
@@ -59,48 +77,102 @@
                     android:id="@+id/btn3"
                     android:layout_width="40dp"
                     android:layout_height="55dp"
-                    android:text="3"
-                    android:layout_margin="5dp"
+                    android:text="@string/n3"
+                    android:textSize="12sp"
+                    android:layout_margin="7dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeMaxTextSize="16sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:padding="0dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@android:color/holo_blue_dark"
                     android:gravity="center" />
 
                 <Button
                     android:id="@+id/btn4"
                     android:layout_width="40dp"
                     android:layout_height="55dp"
-                    android:text="4"
-                    android:layout_margin="5dp"
+                    android:text="@string/n4"
+                    android:textSize="12sp"
+                    android:layout_margin="7dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeMaxTextSize="16sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:padding="0dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@android:color/holo_blue_dark"
                     android:gravity="center" />
 
                 <Button
                     android:id="@+id/btn5"
                     android:layout_width="40dp"
                     android:layout_height="55dp"
-                    android:text="5"
-                    android:layout_margin="5dp"
+                    android:text="@string/n5"
+                    android:textSize="12sp"
+                    android:layout_margin="7dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeMaxTextSize="16sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:padding="0dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@android:color/holo_blue_dark"
                     android:gravity="center" />
 
                 <Button
                     android:id="@+id/btn6"
                     android:layout_width="40dp"
                     android:layout_height="55dp"
-                    android:text="6"
-                    android:layout_margin="5dp"
+                    android:text="@string/n6"
+                    android:textSize="12sp"
+                    android:layout_margin="7dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeMaxTextSize="16sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:padding="0dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@android:color/holo_blue_dark"
                     android:gravity="center" />
 
                 <Button
                     android:id="@+id/btn7"
                     android:layout_width="40dp"
                     android:layout_height="55dp"
-                    android:text="7"
-                    android:layout_margin="5dp"
+                    android:text="@string/n7"
+                    android:textSize="12sp"
+                    android:layout_margin="7dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeMaxTextSize="16sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:padding="0dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@android:color/holo_blue_dark"
                     android:gravity="center" />
 
                 <Button
                     android:id="@+id/btn8"
                     android:layout_width="40dp"
                     android:layout_height="55dp"
-                    android:text="8"
-                    android:layout_margin="5dp"
+                    android:text="@string/n8"
+                    android:textSize="12sp"
+                    android:layout_margin="7dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeMaxTextSize="16sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:padding="0dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@android:color/holo_blue_dark"
                     android:gravity="center" />
 
             </GridLayout>
@@ -115,11 +187,15 @@
             android:layout_marginHorizontal="20dp"
             android:orientation="vertical">
 
-            <Button
+            <ImageButton
                 android:id="@+id/btnConnect"
                 android:layout_width="50dp"
-                android:layout_height="55dp"
-                android:backgroundTint="@android:color/holo_red_dark"/>
+                android:layout_height="50dp"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:background="@drawable/circular_button"
+                android:src="@drawable/baseline_power_settings_new_24"
+                android:scaleType="centerInside" />
+
 
         </LinearLayout>
 
@@ -139,32 +215,69 @@
                     android:id="@+id/btnGetData"
                     android:layout_width="40dp"
                     android:layout_height="55dp"
-                    android:text="1"
-                    android:layout_margin="5dp"
+                    android:text="@string/w1"
+                    android:textSize="12sp"
+                    android:layout_margin="7dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeMaxTextSize="16sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:padding="0dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@android:color/holo_blue_dark"
                     android:gravity="center" />
 
                 <!-- Button 2 -->
                 <Button
                     android:layout_width="40dp"
                     android:layout_height="55dp"
-                    android:text="2"
-                    android:layout_margin="5dp"
+                    android:text="@string/w2"
+                    android:textSize="12sp"
+                    android:layout_margin="7dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeMaxTextSize="16sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:padding="0dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@android:color/holo_blue_dark"
                     android:gravity="center" />
 
                 <!-- Button 3 -->
                 <Button
                     android:layout_width="40dp"
                     android:layout_height="55dp"
-                    android:text="3"
-                    android:layout_margin="5dp"
+                    android:text="@string/w3"
+                    android:textSize="12sp"
+                    android:layout_margin="7dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeMaxTextSize="16sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:padding="0dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@android:color/holo_blue_dark"
                     android:gravity="center" />
 
                 <!-- Button 4 -->
                 <Button
                     android:layout_width="40dp"
                     android:layout_height="55dp"
-                    android:text="4"
-                    android:layout_margin="5dp"
+                    android:text="@string/w4"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:layout_margin="7dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeMaxTextSize="16sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:padding="0dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@android:color/holo_blue_dark"
                     android:gravity="center" />
             </LinearLayout>
 
@@ -184,37 +297,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guidelineVertical80">
 
-        <!-- Top Arrow Layout (45% width) -->
+        <!-- Arrow top/bottom layout -->
         <LinearLayout
             android:id="@+id/topArrows"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4.5"
             android:background="@drawable/dashed_border"
-            android:gravity="bottom|center_horizontal"
-        android:orientation="vertical">
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="4dp">
 
-        <ImageButton
-            android:id="@+id/btnForward"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.4"
-            android:layout_margin="10dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/baseline_arrow_upward_24" />
+            <ImageButton
+                android:id="@+id/btnForward"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/arrow_button_selector"
+                android:src="@drawable/baseline_arrow_upward_24"
+                android:scaleType="centerInside" />
 
-        <ImageButton
-            android:id="@+id/btnBack"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.4"
-            android:layout_margin="10dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/baseline_arrow_downward_24" />
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/arrow_button_selector"
+                android:src="@drawable/baseline_arrow_downward_24"
+                android:scaleType="centerInside" />
+        </LinearLayout>
 
 
-    <!-- Middle Data Layout (10% width) -->
+
+        <!-- Middle Data Layout (10% width) -->
         <LinearLayout
             android:id="@+id/data"
             android:layout_width="0dp"
@@ -245,14 +362,13 @@
                     android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@id/controlLayout"
                     android:layout_marginTop="20dp" />
             </LinearLayout>
 
         </LinearLayout>
 
 
-        <!-- Bottom Arrow Layout (45% width) -->
+        <!-- Arrows left/right layout -->
         <LinearLayout
             android:id="@+id/bottomArrows"
             android:layout_width="0dp"
@@ -260,26 +376,30 @@
             android:layout_weight="4.5"
             android:background="@drawable/dashed_border"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingHorizontal="4dp">
 
             <ImageButton
                 android:id="@+id/btnLeft"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.4"
-                android:layout_margin="10dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/baseline_arrow_back_24" />
+                android:layout_height="100dp"
+                android:layout_weight="0.5"
+                android:layout_marginHorizontal="4dp"
+                android:background="@drawable/arrow_button_selector"
+                android:src="@drawable/baseline_arrow_back_24"
+                android:scaleType="centerInside" />
 
             <ImageButton
                 android:id="@+id/btnRight"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.4"
-                android:layout_margin="10dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/baseline_arrow_forward_24" />
+                android:layout_height="100dp"
+                android:layout_weight="0.5"
+                android:layout_marginHorizontal="4dp"
+                android:background="@drawable/arrow_button_selector"
+                android:src="@drawable/baseline_arrow_forward_24"
+                android:scaleType="centerInside" />
         </LinearLayout>
+
     </LinearLayout>
 
 
