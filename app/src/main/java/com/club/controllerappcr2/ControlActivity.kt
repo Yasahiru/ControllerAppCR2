@@ -22,7 +22,9 @@ import com.club.controllerappcr2.utils.BluetoothManager.socket
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.io.BufferedReader
 import java.io.IOException
+import java.io.InputStreamReader
 
 class ControlActivity : AppCompatActivity() {
 
@@ -89,18 +91,22 @@ class ControlActivity : AppCompatActivity() {
     }
 
     private fun readData() {
-        try {
-            val buffer = ByteArray(1024)
-            val bytes = socket?.inputStream?.read(buffer) ?: 0
-            val incoming = String(buffer, 0, bytes)
+        Thread {
+            try {
+                val reader = BufferedReader(InputStreamReader(socket?.inputStream))
+                val incoming = reader.readLine() // Waits until full line (\n) is received
 
-            runOnUiThread {
-                adapter.addData(SensorData(incoming.trim()))
+                runOnUiThread {
+                    if (!incoming.isNullOrBlank()) {
+                        adapter.addData(SensorData(incoming.trim()))
+                    }
+                }
+            } catch (e: IOException) {
+                e.printStackTrace()
             }
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
+        }.start()
     }
+
 
 
     private fun hasBluetoothPermission(): Boolean {

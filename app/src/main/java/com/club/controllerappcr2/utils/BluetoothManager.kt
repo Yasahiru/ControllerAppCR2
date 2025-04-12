@@ -38,7 +38,6 @@ object BluetoothManager {
         }
     }
 
-
     fun send(command: String) {
         try {
             socket?.outputStream?.write(command.toByteArray())
