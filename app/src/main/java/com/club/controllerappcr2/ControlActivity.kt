@@ -2,13 +2,15 @@ package com.club.controllerappcr2
 
 import android.Manifest
 import android.bluetooth.BluetoothAdapter
-import android.content.Context
 import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.Switch
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -33,6 +35,7 @@ class ControlActivity : AppCompatActivity() {
     private lateinit var adapter: SensorDataAdapter
     private val dataList = mutableListOf<SensorData>()
 
+    @RequiresApi(Build.VERSION_CODES.S)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -59,22 +62,186 @@ class ControlActivity : AppCompatActivity() {
         val btnLeft: ImageButton = findViewById(R.id.btnLeft)
         val btnRight: ImageButton = findViewById(R.id.btnRight)
 
-        btn1.setOnClickListener { BluetoothManager.send("1") }
-        btn2.setOnClickListener { BluetoothManager.send("2") }
-        btn3.setOnClickListener { BluetoothManager.send("3") }
-        btn4.setOnClickListener { BluetoothManager.send("4") }
-        btn5.setOnClickListener { BluetoothManager.send("5") }
-        btn6.setOnClickListener { BluetoothManager.send("6") }
-        btn7.setOnClickListener { BluetoothManager.send("7") }
-        btn8.setOnClickListener { BluetoothManager.send("8") }
+        var istoggledbtn1 = false
+        var istoggledbtn2 = false
+        var istoggledbtn3 = false
+        var istoggledbtn4 = false
+
+        fun setDefault(){
+            btn1.setBackgroundTintList(ContextCompat.getColorStateList(this, android.R.color.holo_blue_dark))
+            btn2.setBackgroundTintList(ContextCompat.getColorStateList(this, android.R.color.holo_blue_dark))
+            btn3.setBackgroundTintList(ContextCompat.getColorStateList(this, android.R.color.holo_blue_dark))
+            btn4.setBackgroundTintList(ContextCompat.getColorStateList(this, android.R.color.holo_blue_dark))
+        }
+
+        fun btnselected(wich:Int){
+            when(wich){
+                1-> {
+                    setDefault()
+                    istoggledbtn2 = false
+                    istoggledbtn3 = false
+                    istoggledbtn4 = false
+                    btn1.setBackgroundTintList(ContextCompat.getColorStateList(this, android.R.color.holo_orange_dark))
+                }
+                2-> {
+                    setDefault()
+                    istoggledbtn1 = false
+                    istoggledbtn3 = false
+                    istoggledbtn4 = false
+                    btn2.setBackgroundTintList(ContextCompat.getColorStateList(this, android.R.color.holo_orange_dark))
+                }
+                3-> {
+                    setDefault()
+                    istoggledbtn1 = false
+                    istoggledbtn2 = false
+                    istoggledbtn4 = false
+                    btn3.setBackgroundTintList(ContextCompat.getColorStateList(this, android.R.color.holo_orange_dark))
+                }
+                4-> {
+                    setDefault()
+                    istoggledbtn1 = false
+                    istoggledbtn2 = false
+                    istoggledbtn3 = false
+                    btn4.setBackgroundTintList(ContextCompat.getColorStateList(this, android.R.color.holo_orange_dark))
+                }
+            }
+        }
+
+
+        btn1.setOnClickListener {
+            istoggledbtn1 = !istoggledbtn1
+            if(istoggledbtn1){
+                btnselected(1)
+            }else{
+                btn1.setBackgroundTintList(ContextCompat.getColorStateList(this, android.R.color.holo_blue_dark))
+                Log.d("test","$istoggledbtn1")
+            }
+        }
+        btn2.setOnClickListener {
+            istoggledbtn2 = !istoggledbtn2
+            if(istoggledbtn2){
+                btnselected(2)
+            }else{
+                btn2.setBackgroundTintList(ContextCompat.getColorStateList(this, android.R.color.holo_blue_dark))
+                Log.d("test","$istoggledbtn2")
+            }
+        }
+        btn3.setOnClickListener {
+            istoggledbtn3 = !istoggledbtn3
+            if(istoggledbtn3){
+                btnselected(3)
+            }else{
+                btn3.setBackgroundTintList(ContextCompat.getColorStateList(this, android.R.color.holo_blue_dark))
+                Log.d("test","$istoggledbtn3")
+            }
+        }
+        btn4.setOnClickListener {
+            istoggledbtn4 = !istoggledbtn4
+            if(istoggledbtn4){
+                btnselected(4)
+            }else{
+                btn4.setBackgroundTintList(ContextCompat.getColorStateList(this, android.R.color.holo_blue_dark))
+                Log.d("test","$istoggledbtn4")
+            }
+        }
+
+        btn5.setOnClickListener {
+            Log.i("test","cas4")
+            BluetoothManager.send("q")
+        }
+        btn6.setOnClickListener {
+            Log.i("test","5")
+            BluetoothManager.send("u")
+        }
+        btn7.setOnClickListener {
+            Log.i("test","6")
+            BluetoothManager.send("y")
+        }
+        btn8.setOnClickListener {
+            Log.i("test","7")
+            BluetoothManager.send("3")
+        }
+
+        btnForward.setOnClickListener {
+           if(istoggledbtn1){
+               BluetoothManager.send("a")
+               Log.d("test","a")
+           }else if(istoggledbtn2){
+               BluetoothManager.send("e")
+               Log.d("test","e")
+           }else if(istoggledbtn3){
+               BluetoothManager.send("i")
+               Log.d("test","i")
+           }else if(istoggledbtn4){
+               BluetoothManager.send("m")
+               Log.d("test","m")
+           }else{
+                BluetoothManager.send("F")
+               Log.d("test","F")
+           }
+        }
+
+        btnBack.setOnClickListener {
+            if(istoggledbtn1){
+                BluetoothManager.send("b")
+                Log.d("test","b")
+            }else if(istoggledbtn2){
+                BluetoothManager.send("f")
+                Log.d("test","f")
+            }else if(istoggledbtn3){
+                BluetoothManager.send("g")
+                Log.d("test","g")
+            }else if(istoggledbtn4){
+                BluetoothManager.send("n")
+                Log.d("test","n")
+            }else{
+                BluetoothManager.send("D")
+                Log.d("test","D")
+            }
+        }
+
+        btnLeft.setOnClickListener {
+            if(istoggledbtn1){
+                BluetoothManager.send("c")
+                Log.d("test","c")
+            }else if(istoggledbtn2){
+                BluetoothManager.send("j")
+                Log.d("test","j")
+            }else if(istoggledbtn3){
+                BluetoothManager.send("h")
+                Log.d("test","h")
+            }else if(istoggledbtn4){
+                BluetoothManager.send("o")
+                Log.d("test","o")
+            }else{
+                BluetoothManager.send("L")
+                Log.d("test","L")
+            }
+        }
+
+        btnRight.setOnClickListener {
+            if(istoggledbtn1){
+                BluetoothManager.send("d")
+                Log.d("test","d")
+            }else if(istoggledbtn2){
+                BluetoothManager.send("n")
+                Log.d("test","n")
+            }else if(istoggledbtn3){
+                BluetoothManager.send("l")
+                Log.d("test","l")
+            }else if(istoggledbtn4){
+                BluetoothManager.send("p")
+                Log.d("test","p")
+            }else{
+                BluetoothManager.send("R")
+                Log.d("test","R")
+            }
+        }
+
         btnConnect.setOnClickListener {
             BluetoothManager.disconnect()
             finish()
         }
-        btnForward.setOnClickListener { BluetoothManager.send("F") }
-        btnBack.setOnClickListener { BluetoothManager.send("B") }
-        btnLeft.setOnClickListener { BluetoothManager.send("L") }
-        btnRight.setOnClickListener { BluetoothManager.send("R") }
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         adapter = SensorDataAdapter(dataList)
@@ -83,11 +250,9 @@ class ControlActivity : AppCompatActivity() {
 
         val getDataButton = findViewById<Button>(R.id.btnGetData)
         getDataButton.setOnClickListener {
-            send("G") // Ask Arduino to send data
+            send("G")
             readData()
         }
-
-
     }
 
     private fun readData() {
@@ -107,8 +272,7 @@ class ControlActivity : AppCompatActivity() {
         }.start()
     }
 
-
-
+    @RequiresApi(Build.VERSION_CODES.S)
     private fun hasBluetoothPermission(): Boolean {
         return ActivityCompat.checkSelfPermission(
             this,
@@ -116,6 +280,7 @@ class ControlActivity : AppCompatActivity() {
         ) == PackageManager.PERMISSION_GRANTED
     }
 
+    @RequiresApi(Build.VERSION_CODES.S)
     private fun requestBluetoothPermission() {
         ActivityCompat.requestPermissions(
             this,
@@ -147,7 +312,6 @@ class ControlActivity : AppCompatActivity() {
         }
     }
 
-
     private fun updateConnectButtonColor(isConnected: Boolean) {
         if (isConnected) {
             btnConnect.backgroundTintList = ContextCompat.getColorStateList(this, android.R.color.holo_green_dark)
@@ -156,9 +320,9 @@ class ControlActivity : AppCompatActivity() {
         }
     }
 
-    private fun showToast(message: String) {
+    private fun showToast() {
         runOnUiThread {
-            Toast.makeText(this@ControlActivity, message, Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@ControlActivity, "Bluetooth permission denied", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -169,9 +333,8 @@ class ControlActivity : AppCompatActivity() {
                 connectToDevice()
             } else {
                 Log.e("ControlActivity", "Bluetooth permission denied")
-                showToast("Bluetooth permission denied")
+                showToast()
             }
-
         }
     }
 }
